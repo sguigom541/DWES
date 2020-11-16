@@ -1,0 +1,50 @@
+
+.main-header{
+    width:100%;
+    background:#252932;
+}
+#examen{
+    margin-top:100px;
+    width:100%;
+    height:100%;
+    
+}
+#izq{
+    background-color: white;
+    float:left;
+    width:30%;
+    
+}
+#preguntas-contestadas{
+    background-color:black;
+    border-radius:20px;
+}
+#tiempo-Restante{
+    background-color: black;
+    border-radius:20px;
+}
+
+.rango{
+    margin-left:30%;
+}
+h2{
+    color:white;
+}
+p{
+    color:white;
+    text-align: center;
+}
+#centro{
+    background-color: lightblue;
+    float:left;
+    width:70%;
+    border-radius:20px;
+}
+li{
+    list-style: none;
+}
+
+
+.oculto{
+    display:none;
+}

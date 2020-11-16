@@ -1,0 +1,16 @@
+<?xml version='1.0' standalone='yes'?>
+<!DOCTYPE credenciales 
+[
+    <!ELEMENT credenciales (host,username,pass,baseDatos)>
+    <!ELEMENT host (#PCDATA)>
+    <!ELEMENT username (#PCDATA)>
+    <!ELEMENT pass (#PCDATA)>
+    <!ELEMENT baseDatos (#PCDATA)>
+]>
+
+<credenciales>
+    <host>127.0.0.1</host>
+    <username>root</username>
+    <pass></pass>
+    <baseDatos>barroSGG</baseDatos>
+</credenciales>

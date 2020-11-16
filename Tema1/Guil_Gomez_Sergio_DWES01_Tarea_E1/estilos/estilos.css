@@ -1,0 +1,46 @@
+#lista{
+    padding:0;
+}
+
+#lista li{
+    display:inline;
+}
+
+#lista li a{
+    font-family: Arial;
+    font-size: 11px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #2175bc;
+    color: #fff;
+}
+
+fieldset
+{
+  background-color: #2175bc;
+  max-width:500px;
+  padding:16px;	
+}
+
+.fieldset1
+{
+    border:2px solid green;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"]{
+    width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+label{
+    color:white;
+}

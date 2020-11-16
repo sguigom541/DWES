@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	background-color:white; 
+	font-size: 1em;
+	line-height: 1.5em;
+}
+h1 {
+    color:white;
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin:0;
+	text-align: center;
+	font-weight: 300;
+}
+h2{
+    text-align:center;
+}
+p{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-indent: 2rem;
+}
+em{
+    
+    color:red;
+    
+}
+#index-header{
+    background-color: #292C44;
+    position: absolute;
+    display: inline-block;
+    top:0;
+    width: 100%;
+    height: 13%;
+    color: white;
+    
+}
+.contenedor-titulo-index{
+    
+    position:relative;
+    float:left;
+    top:0;
+    margin:0 0 0 30%;
+}
+.contenedor-logo{
+    
+    width:30%;
+}
+#index-content {
+	background: white;
+	width: 90%;
+	max-width: 800px;
+    margin: 300px auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+#index-content .content {
+		padding: 40px;
+	}
+#logo-header{
+    float:left;
+    height:100px;
+    width:100px;
+    
+}
+
+#logo-login-header{
+    float:right;
+    height:50px;
+    width:50px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+    
+}
+
+#index-footer {
+    background-color: #292C44;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+  }
+
+#logo-footer-phone{
+    height:40px;
+    width:40px;
+}
+
+/*estilos del menu usuario*/
+nav{
+    position:relative;
+    margin-top:125px;
+    box-sizing:border-box;
+    font-size:0;
+}
+nav a{
+    text-decoration:none;
+    color:inherit;
+    font-size:14px;
+} 
+nav li{
+    display:inline-block;
+    width:10%;
+    padding:5px 10px;
+    background-color:#000;
+    border:1px solid #000;
+    text-align:center;
+    color:#fff;
+}
+nav li:hover{
+    background-color:#fff;
+    color:#000;
+}
+
+/*estilos para las citas*/
+
+#cita{
+    width:100%;
+    box-sizing: border-box;
+    position:absolute;
+    top:200px;
+
+}
+#cita form{
+    width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+#cita form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+
+/*Estilos de la tabla de leer citas*/
+#tabla{
+    text-align:center;
+}
+#tabla{
+    margin:0 auto;
+    text-align:left;
+}
+table{
+    width:500px;
+    font:normal 13px Arial;
+    text-align:center;
+    border-collapse:collapse
+}
+
+table tr {
+    font:bold 15px Arial;
+    background-color:lightblue;
+}
+
+#tabla th{
+    border:1px solid black;
+    font:bold 15px Arial;
+    background-color:lightblue;
+}
+#tabla td{
+    border:1px solid black;
+    font:bold 15px Arial;
+    background-color:lightblue;
+}
+
