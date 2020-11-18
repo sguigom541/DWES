@@ -131,5 +131,19 @@ class BD
         }
         return $preguntas;
     }
+
+    public static function respuestasCorrectas($codExamen)
+    {
+        $sql="select * from examen_tiene_pregunta ";
+        $sql .= "NATURAL JOIN pregunta where codExamen='".$codExamen. "'" ;
+        $sql .= "order by ordenPregunta";
+        $respuestasCorrectas=[];
+        $resultado= self::ejecutarConsulta($sql);
+        if($resultado!=null){
+            $respuestasCorrectas=$resultado->fetchAll(PDO::FETCH_CLASS);
+        }
+        return $respuestasCorrectas;
+    }
+
    
 }

@@ -17,8 +17,8 @@ require_once "../modelo/ALUMNO.php";
 require_once "../modelo/EXAMEN.php";
 require_once "../control/funciones.inc.php";
 session_start();
-//$alumno = $_SESSION['alumno'];
-//$examen = $_SESSION['examen'];
+$alumno = $_SESSION['alumno'];
+$examen = $_SESSION['examen'];
 
 ?>
 
@@ -33,7 +33,7 @@ session_start();
                 <div id="preguntas-contestadas">
                     <h2>Preguntas Contestadas</h2>
                     <!--<input class="rango" type="range" name="" id="" min="1" disabled=true>-->
-                    
+
                 </div>
 
                 <div id="tiempo-Restante">
@@ -46,12 +46,12 @@ session_start();
                 <input type="button"  id="enviar" value="enviar" />
                 </div>
             </div>
-            <form action="../control/finalizar_examen_controller.php" method="get" id="formulario">
+            <form action="../control/finalizar_examen_controller.php" method="POST" id="formulario">
                 <div id="centro">
 
                     <?php
-                    //$examen->getCodExamen()
-                    $arrayPreguntas = BD::obtenerPreguntasExamen("examT1");
+                    
+                    $arrayPreguntas = BD::obtenerPreguntasExamen($examen->getCodExamen());
                     crearExamen($arrayPreguntas);
                     ?>
 
