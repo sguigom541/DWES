@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>revisión</title>
+    <link rel="stylesheet" href="../estilos/estilos-revision-examen.css">
 </head>
 
 <?php
@@ -16,7 +17,7 @@
 ?>
 <body>
     <?php
-    include_once "cabecera.php";
+        include_once "cabecera.php";
         $alumno = $_SESSION['alumno'];
         $examen= $_SESSION['examen'];
         $dni=$alumno->getDni();
@@ -25,9 +26,9 @@
         $ape2=$alumno->getApe2();
         $codExamen=$examen->getCodExamen();
     ?>
-
+    
     <h1>Examen <?php echo $codExamen ?></h1>
-    <table class="tabla" style="background-color: #bbb;">
+    <table class="tabla" style="background-color: #bbb; ">
         <tr>
             <th>Nombre</th>
             <td><?php echo $nombre?></td>
@@ -41,12 +42,24 @@
             <td><?php echo $ape2?></td>
         </tr>
         <tr>
+            <th>Hora Comienzo</th>
+            <td><?php echo $_SESSION['fechaHoraInicio']?></td>
+        </tr>
+        <tr>
+            <th>Hora Fin</th>
+            <td><?php echo $_SESSION['fechaHoraFin']?></td>
+        </tr>
+        <tr>
             <th>Aciertos</th>
             <td><?php echo $_SESSION['aciertos']?></td>
         </tr>
         <tr>
             <th>Fallos</th>
             <td><?php echo $_SESSION['fallos']?></td>
+        </tr>
+        <tr>
+            <th>Nota</th>
+            <td><?php echo $_SESSION['nota']?></td>
         </tr>
     </table>
 </body>

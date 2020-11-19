@@ -38,7 +38,7 @@
 
         public function getApe2(){return $this->ape2;}
 
-        public function setApe2($newApe2){$this->nombre=$newApe2;}
+        public function setApe2($newApe2){$this->ape2=$newApe2;}
 
         public function getFechaNac(){return $this->fechaNac;}
 

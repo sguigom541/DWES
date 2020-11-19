@@ -1,6 +1,7 @@
 <?php  
     require_once "../modelo/ALUMNO.php";
     require_once "../modelo/EXAMEN.php";
+    require_once "../modelo/ALUMNOEXAMEN.php";
 class BD
 {
     public static function ejecutarConsulta($sql)
@@ -21,7 +22,24 @@ class BD
 		}
         return $resultado;
     }
+    public static function addInTable($sql)
+    {
+        $dsn="mysql:host=localhost;dbname=proyectoexamen";
+        $usuario = 'root';
+        $contrasena = '';
 
+        try {
+			$conn = new PDO($dsn, $usuario, $contrasena);
+			$resultado = null;
+            if (isset($conn))
+            {
+                $resultado = $conn->prepare($sql);
+            } 
+		}catch (PDOException $e) {
+            die("Error: " . $e->getMessage());
+		}
+        return $resultado;
+    }
     /**
      * Función que pasándole un dni y una contraseña verifica si existe el alumno.
      * @return true si existe el alumno.
@@ -132,9 +150,14 @@ class BD
         return $preguntas;
     }
 
+    /**
+     * Función que me devuelve un array con las respuestas correctas del examen
+     * @param string el código de examen
+     * @return array el array con las respuestas correctas
+     */
     public static function respuestasCorrectas($codExamen)
     {
-        $sql="select * from examen_tiene_pregunta ";
+        $sql="select respuestaCorrecta from examen_tiene_pregunta ";
         $sql .= "NATURAL JOIN pregunta where codExamen='".$codExamen. "'" ;
         $sql .= "order by ordenPregunta";
         $respuestasCorrectas=[];
@@ -145,5 +168,26 @@ class BD
         return $respuestasCorrectas;
     }
 
+    /**
+     * Función que pasándole un objeto de la clase alumnoexamen hace insert en la tabla alumno_realiza_examen
+     * @param alumnoexamen el objeto alumnoexamen
+     */
+    public static function guardarExamenAlumno(alumnoexamen $alumnoexamen){
+
+        $sql = "INSERT INTO alumno_realiza_examen (dni,codExamen,fechaHoraComienzo,fechaHoraFin,respuesta) VALUES (?,?,?,?,?)";
+        $resultado=self::addInTable($sql);
+        $dni=$alumnoexamen->getDNI();
+        $codExamen=$alumnoexamen->getCodExamen();
+        $fechaHoraComienzo=$alumnoexamen->getFechaHoraComienzo();
+        $fechaHoraFin=$alumnoexamen->getFechaHoraFin();
+        $respuesta=$alumnoexamen->getRespuesta();
+        
+        $resultado->bindParam(1,$dni);
+        $resultado->bindParam(2,$codExamen);
+        $resultado->bindParam(3,$fechaHoraComienzo);
+        $resultado->bindParam(4,$fechaHoraFin);
+        $resultado->bindParam(5,$respuesta);
+        $resultado->execute();
+    }
    
 }

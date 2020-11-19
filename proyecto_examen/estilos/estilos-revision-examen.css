@@ -1,0 +1,21 @@
+.tabla{
+    border-collapse:collapse;
+    border: 1px solid black;
+    text-align:center;
+}
+.tabla tr{
+    font:bold 15px Arial;
+    background-color:lightblue;
+}
+
+
+.tabla th{
+    border:1px solid black;
+    font:bold 15px Arial;
+    background-color:lightblue;
+}
+.tabla td{
+    border:1px solid black;
+    font:bold 15px Arial;
+    background-color:lightblue;
+}

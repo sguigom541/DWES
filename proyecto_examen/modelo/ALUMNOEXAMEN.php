@@ -7,14 +7,7 @@
         private $fechaHoraFin;
         private $respuesta;
 
-        public function  __construct($row)
-        {
-            $this->setDNI($row['codExamen']);
-            $this->setCodExamen($row['codExamen']);
-            $this->setFechaHoraComienzo($row['fechaHoraComienzo']);
-            $this->setFechaHoraFin($row['fechaHoraFin']);
-            $this->setRespuesta($row['respuesta']);
-        }
+        
         
         public function getDNI(){return $this->dni;}
         public function setDNI($newDNI){$this->dni=$newDNI;}
