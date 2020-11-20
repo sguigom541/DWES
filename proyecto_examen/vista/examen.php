@@ -35,7 +35,7 @@ $examen = $_SESSION['examen'];
                     <div id="myBar"></div>
                 </div>
                 <?php
-                   
+                    
                     $fechaInicioExamen=$examen->getFechaHoraComienzo();
                     $fechaFinExamen=$examen->getFechaHoraFin();
                     $duracion=$examen->getDuracion();

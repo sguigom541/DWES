@@ -136,7 +136,20 @@ class BD
         return $verificado;
 
     }
-
+    /**
+     * Funcion que me devuelve el examen que ha realizado el alumno.
+     */
+    public static function devolverExamenHechoAlumno($codExamen,$dniAlumno){
+        $sql= "SELECT * FROM alumno_realiza_examen ";
+        $sql .= " WHERE dni='".$dniAlumno. "'";
+        $sql .= " AND codExamen='".$codExamen. "'";
+        $resultado = self::ejecutarConsulta($sql);
+        $examenHecho=[];
+        if($resultado!=null){
+            $examenHecho=$resultado->fetchAll(PDO::FETCH_CLASS);
+        }
+        return $examenHecho;
+    }
     public static function obtenerPreguntasExamen($codExamen)
     {
         $sql="select * from examen_tiene_pregunta ";

@@ -16,7 +16,6 @@ window.addEventListener("load", function () {
 
         //La pregunta que no esta oculta, en la que me encuentro ahora
         var ahora = this.parentNode.parentNode.querySelector(".pregunta:not(.oculto)");
-
         //El siguiene hermano de quien no esta oculto
         var next = ahora.nextElementSibling;
 
@@ -42,7 +41,6 @@ window.addEventListener("load", function () {
     botAnt.addEventListener("click",function(){
         //La pregunta que no esta oculta, en la que me encuentro ahora
         var ahora = this.parentNode.parentNode.querySelector(".pregunta:not(.oculto)");
-
         //El siguiene hermano de quien no esta oculto
         var ant = ahora.previousElementSibling;
 
@@ -90,14 +88,14 @@ window.addEventListener("load", function () {
     }
 
 
-    //barra de progreso
+    /*//barra de progreso
 
-    /*var barraProgreso=document.getElementById("mybar");
+    var barraProgreso=document.getElementById("mybar");
     var porcentaje="";
     var tamanio=preguntas.length;
     porcentaje=(preguntas[0].getAttribute("id") *100) / (tamanio);
     porcentaje=porcentaje + "%";
-    //barraProgreso.style.width=porcentaje;*/
+    barraProgreso.style.width=porcentaje;*/
 
 
 
@@ -138,6 +136,7 @@ window.addEventListener("load", function () {
         }
     }
     setTimeout(actualiza, 1000);
+
 
 
 
