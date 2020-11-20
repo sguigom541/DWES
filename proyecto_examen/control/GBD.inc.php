@@ -6,7 +6,7 @@ class BD
 {
     public static function ejecutarConsulta($sql)
     {
-        $dsn="mysql:host=localhost;dbname=proyectoexamen";
+        $dsn="mysql:host=localhost;dbname=sggproyectoexamen";
         $usuario = 'root';
         $contrasena = '';
 
@@ -24,7 +24,7 @@ class BD
     }
     public static function addInTable($sql)
     {
-        $dsn="mysql:host=localhost;dbname=proyectoexamen";
+        $dsn="mysql:host=localhost;dbname=sggproyectoexamen";
         $usuario = 'root';
         $contrasena = '';
 
