@@ -1,5 +1,7 @@
 <?php
 
+use Dompdf\Dompdf;
+
 require "./cargadores/cargarclases.php";
 require "./cargadores/cargarhelper.php";
 // require "./Clases/persona.php";
@@ -11,4 +13,5 @@ echo "<br>";
 $m = new Mascota();
 $m->setNombre("Perrico");
 echo "hola ".Funciones::mayusculas($m->getNombre());
+
 
