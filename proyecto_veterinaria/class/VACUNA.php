@@ -1,5 +1,5 @@
 <?php
-    class Vacuna{
+    class vacuna{
         private $codVacuna;
         private $nombre;
 

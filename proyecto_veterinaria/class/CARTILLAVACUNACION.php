@@ -2,7 +2,7 @@
 /**
  * Clase que alberga la documentación a cerca de la cartilla de vacunación de una mascota
  */
-class CartillaVacunacion
+class cartillaVacunacion
 {
     //propiedades del a clase CartillaVacunacion
 

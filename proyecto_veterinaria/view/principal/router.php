@@ -1,29 +1,97 @@
 <?php
-if (isset($_GET['menu'])) {
-    if ($_GET['menu'] == "inicio") {
-        require_once 'index.php';
-    }
-    if ($_GET['menu'] == "login") {
-        require_once './Vistas/Login/autentifica.php';
-    }
-    if ($_GET['menu'] == "cerrarsesion") {
-        require_once './Vistas/Login/cerrarsesion.php';
-     
-    }
-    if ($_GET['menu'] == "mantenimiento") {
-        require_once './Vistas/mantenimiento/mantenimiento.php';
-     
-    }
-    if ($_GET['menu'] == "listadoanimales") {
-        require_once './Vistas/Mantenimiento/listadoanimales.php';
-     
-    }
-    if ($_GET['menu'] == "listadovacunas") {
-        require_once './Vistas/Mantenimiento/listadovacunas.php';
-     
+    /**
+     * Enrutador que enruta si el rol es el del usuario normal
+     * 
+     */
+    if(isset($_GET['user']))
+    {
+        require_once './view/mantenimiento/usuario/menuUsuario.php';
+        switch($_GET['user'])
+        {
+            case "cliente":
+                require_once './view/mantenimiento/usuario/cliente.php';
+            break;
+            case "historialMascota":
+                require_once './view/mantenimiento/usuario/historialMascota.php';
+            break;
+        }
     }
 
-    
 
-    
-}
+
+    /**
+     * Enrutador que enruta si el rol es el del veterinario
+     */
+    if(isset($_GET['veterinario']))
+    {
+        require_once './view/mantenimiento/veterinario/administracion/menuAdmin.php';
+        switch($_GET['veterinario'])
+        {
+            case "adminUsuarios":
+                require_once './view/mantenimiento/veterinario/administracion/adminUsuario.php';
+            break;
+            case "adminMascotas":
+                require_once './view/mantenimiento/veterinario/administracion/adminMascota.php';
+            break;
+            case "adminCVacunacion":
+                require_once './view/mantenimiento/veterinario/administracion/adminCVacunacion.php';
+            break;
+            case "darCita":
+                require_once './view/mantenimiento/veterinario/administracion/darCita.php';
+            break;
+            case "pasarVisita":
+                require_once './view/mantenimiento/veterinario/otrasAdmin/pasarVisita.php';
+            break;
+            case "adminRol":
+                require_once './view/mantenimiento/veterinario/otrasAdmin/adminRol.php';
+            break;
+            case "adminGenero":
+                require_once './view/mantenimiento/veterinario/otrasAdmin/adminGenero.php';
+            break;
+            case "adminTipoVacuna":
+                require_once './view/mantenimiento/veterinario/otrasAdmin/adminTipoVacuna.php';
+            break;
+            case "adminTipoMascota":
+                require_once './view/mantenimiento/veterinario/otrasAdmin/adminTipoMascota.php';
+            break;
+            case "adminParteCuerpoChip":
+                require_once './view/mantenimiento/veterinario/otrasAdmin/adminParteCuerpoChip.php';
+            break;
+            
+
+        }
+    }
+
+    /**
+     * Enrutador que enruta el rol del tipo de usuario que se encuentra logueado
+     */
+    if(isset($_GET['rol']))
+    {
+        switch($_GET['rol'])
+        {
+            case 1:
+                header("location:?user=cliente");
+            break;
+            case 2:
+                header("location:?veterinario=adminUsuarios");
+            break;
+        }
+    }
+
+    /**
+     * Enrutador que enruta hacia el login y el logOut
+     */
+    if(isset($_GET['acceso']))
+    {
+        switch($_GET['acceso'])
+        {
+            case "login":
+                require_once './view/login/autentifica.php';
+            break;
+            case "logout":
+                require_once './view/login/cerrarsesion.php';
+            break;
+        }
+    }
+
+?>

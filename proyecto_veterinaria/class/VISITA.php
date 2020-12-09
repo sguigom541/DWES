@@ -1,5 +1,5 @@
 <?php
-    class Visita{
+    class visita{
         //declaracion de propiedades de la clase visita
         private $fechaVisita;
         private $codMascota;

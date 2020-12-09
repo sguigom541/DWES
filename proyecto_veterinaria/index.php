@@ -1,7 +1,7 @@
 <?php
+    
     require_once './loader/cargarclases.php';
     require_once './loader/cargarhelper.php';
-    
     class Principal 
     {
         public static function main(){

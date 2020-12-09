@@ -1,5 +1,5 @@
 <?php
-    class Empresa{
+    class empresa{
         //propiedades de la clase empresa
 
         private $cif;

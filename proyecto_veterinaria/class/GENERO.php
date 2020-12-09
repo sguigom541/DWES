@@ -1,5 +1,5 @@
 <?php
-    class Genero{
+    class genero{
         private $codGenero;
         private $nombre;
 

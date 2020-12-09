@@ -227,7 +227,7 @@ class GBD
             throw new PDOException("Error borrando fila:".$e->getMessage());
         }
     }
-   
+
     /**
      * Devuelve el campo que es clave primaria
      *
@@ -251,6 +251,4 @@ class GBD
     {
         return $this->conexion;
     }
-
-    
 }

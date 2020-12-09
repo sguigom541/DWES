@@ -1,5 +1,5 @@
 <?php
-    class Especie{
+    class especie{
         private $codEspecie;
         private $nombre;
         private $chipeable;

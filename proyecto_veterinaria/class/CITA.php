@@ -1,5 +1,5 @@
 <?php
-    class Cita 
+    class cita 
     {
         //propiedades de la clase cita
         private $fechaCita;

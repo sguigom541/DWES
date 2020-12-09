@@ -1,6 +1,6 @@
 <?php
 
-class Mascota
+class mascota
 {
     //propiedades de la clase mascota
     private $codMascota;

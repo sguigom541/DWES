@@ -1,5 +1,5 @@
 <?php
-    class ParteCuerpoChip{
+    class partecuerpochip{
         private $codParteCuerpo;
         private $lugarImplantacion;
         /**
