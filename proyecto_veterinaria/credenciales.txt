@@ -1,0 +1,3 @@
+veterinario: codUsuario: PVx7bpGN contraseña:2081
+
+cliente: codUsuario: bq6PBJwT contraseña: 1221

@@ -1,7 +1,7 @@
 <?php
     class Funcion{
         /**
-         * @param String la contraseña del usuario
+         * @param $passMD5 la contraseña del usuario
          * @return String la contraseña encriptada en md5
          */
         public static function encrypt($passMD5)

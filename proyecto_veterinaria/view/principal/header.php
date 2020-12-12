@@ -2,40 +2,35 @@
 $gbd = new GBD("localhost", "sggveterinaria", "root", "");
 $empresa = $gbd->getAll("empresa");
 Sesion::iniciar();
-$sesion = Sesion::leer('login');
+$sesion = Sesion::leer('usuario');
 ?>
 
 <header>
-    <link rel="stylesheet" href="./css/estilosCabecera.css">
-    <div class="index-header">
-        <div class="contenedor-logo">
-            <img id="logo-header" src="./imagenes/logoVeterinaria.jpg" alt="" srcset=""/>
-        </div>
-        <div class="contenedor-titulo-index">
-            <h1><?php echo $empresa[0]->getNombre(); ?></h1>
-        </div>
-        
+    <div class="header">
+        <h1><?php echo $empresa[0]->getNombre(); ?></h1>
+        <?php
+            echo '<div class="optionsBar">';
+                if($sesion!=null){
+                    echo '<span>|</span>';
+                }
+                echo '<span class="user">';
+                    if($sesion!=null){
+                        $arrayClavePersona=[$sesion];
+                        $cliente=$gbd->findById("usuario",$arrayClavePersona);
+                        echo $cliente[0]->getNombre() . ',' .$cliente[0]->getApe1() . ', '. $cliente[0]->getApe2();
+                    }
+                echo '</span>';
+                    if($sesion!=null){
+                        $arrayClavePersona=[$sesion];
+                        $cliente=$gbd->findById("usuario",$arrayClavePersona);
+                        echo '<img class="photouser" src="' . $cliente[0]->getImgUsuario() . '" alt="Foto del usuario"/>';
+                    }
+                  if($sesion!=null){
+                      echo '<a href="?acceso=logout"><img class="close" src="./img/imgWeb/salir.png"></a>';
+                  }else if(!(isset($_GET['acceso']) == "login") || isset($_GET['menu']) == "inicio"){
+                    echo '<a href="?acceso=login"><img class="close" src="./img/imgWeb/entrar.png"></a>' ;
+                  }
+            echo '</div>';
+        ?>   
     </div>
-    <?php
-        echo '<div class="datos-login">';
-        echo '<div class="nombreUsuario">';
-        if ($sesion != null) {
-            $arrayClavePersona = [$sesion];
-            $cliente = $gbd->findById("usuario", $arrayClavePersona);
-            echo '<p>' . $cliente[0]->getNombre() . ', ' . $cliente[0]->getApe1() . ', ' . $cliente[0]->getApe2();
-            echo '<img src="' . $cliente[0]->getImgUsuario() . '" alt="Foto del usuario"/>';
-        }
-        echo '</div>';
-        echo '<div class="sesionUsuario">';
-        if ($sesion != null) {
-            $arrayClaveRol = [$cliente[0]->getCodigoRol()];
-            $rol = $gbd->findById("rol", $arrayClaveRol);
-            echo '<p> Rol: ' . $rol[0]->getNombre() . '</p>';
-
-            echo '<a href="?acceso=logout">Cerrar Sesion</a>';
-        } else if (!(isset($_GET['acceso']) == "login") || isset($_GET['menu']) == "inicio") {
-            echo '<a href="?acceso=login">Iniciar Sesion';
-        }
-        echo '</div>';
-        ?>
 </header>

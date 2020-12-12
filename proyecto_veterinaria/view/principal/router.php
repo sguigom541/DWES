@@ -79,7 +79,7 @@
     }
 
     /**
-     * Enrutador que enruta hacia el login y el logOut
+     * Enrutador que enruta hacia el login y el logout
      */
     if(isset($_GET['acceso']))
     {

@@ -10,13 +10,11 @@
     <?php
         require_once './view/principal/header.php';
     ?>
-    <section>
-        <div id="cuerpo">
-            <?php
-                require_once './view/principal/router.php';
-            ?>
-        </div>
     
+    <section>
+        <?php
+            require_once './view/principal/router.php';
+        ?>
     </section>
 
     <?php
