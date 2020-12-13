@@ -22,6 +22,7 @@ if (isset($_POST['enviar'])) {
                 "codUsuario" => $_POST['username'], "pass" => md5($_POST['password']), "dni" => $_POST['dni'], "nombre" => $_POST['nombre'],
                 "ape1" => $_POST['ape1'], "ape2" => $_POST['ape2'], "fechaNac" => $_POST['fechaNac'], "telefono" => $_POST['telefono'], "email" => $_POST['email'], "imagenUsuario" => "", "codRol" => $_POST['rol']
             ]);
+            header('location:?veterinario=adminUsuarios');
         }
     }
 }
@@ -65,11 +66,10 @@ if (isset($_POST['enviar'])) {
             <?php
             $arrayRol = $a->getAll("rol");
             foreach ($arrayRol as $clave) {
-                echo '<option value="'.$clave->getCodRol().'">'.$clave->getNomRol().'</option>';
+                echo '<option  value="'.$clave->getCodRol().'">'.$clave->getNombre().'</option>';
             }
             ?>
         </select>
-        <p> <?php echo $valida->ImprimirError("rol") ?></p>
         <input type="submit" value="Crear Usuario" name="enviar" class="btn_save">
     </form>
 </div>

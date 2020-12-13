@@ -7,7 +7,7 @@ if(!empty($_POST)){
 }
 
 
-if (empty($_REQUEST['idUsuario'])) {
+if (empty($_REQUEST['idUsuario']) || $_REQUEST['rol']!=1) {
     header('location:?veterinario=adminUsuarios');
 } else {
     $idUsuario = $_REQUEST['idUsuario'];

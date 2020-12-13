@@ -1,18 +1,15 @@
 <?php
-
-class mascota
-{
+    class mascota{
     //propiedades de la clase mascota
-    private $codMascota;
-    private $nombreMascota;
-    private $fechaNac;
-    private $imgMascota;
-    private $codEspecie;
-    private $codGenero;
-    private $codUsuario;
+        private $codMascota;
+        private $nombre;
+        private $fechaNac;
+        private $imgMascota;
+        private $codEspecie;
+        private $codGenero;
+        private $codUsuario;
 
-
-    //métodos de acceso
+        //métodos de acceso
 
     /**
      * @return String el código de la mascota
@@ -32,16 +29,15 @@ class mascota
      * @return String el nombre de la mascota
      */
     public function getNombreMascota(){
-        return $this->nombreMascota;
+        return $this->nombre;
     }
 
     /**
      * @param String el nuevo nombre de la mascota
      */
     public function setNombreMascota($nuevoNombreMascota){
-        $this->mascota=$nuevoNombreMascota;
+        $this->nombre=$nuevoNombreMascota;
     }
-
     /**
      * @return Date la fecha en que nació la mascota
      */
@@ -111,6 +107,4 @@ class mascota
     public function setCodUsuario($nuevoCodUsuario){
         $this->codUsuario=$nuevoCodUsuario;
     }
-
 }
-?>

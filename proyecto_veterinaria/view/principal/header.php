@@ -12,6 +12,18 @@ $usuario = Sesion::leer('usuario');
         <?php
             echo '<div class="optionsBar">';
                 if($usuario!=null){
+                    echo '<span>';
+                    $arraypersona=[$usuario];
+                    $rol=$gbd->findById("usuario",$arraypersona);
+                    if($rol[0]->getCodigoRol()!=1){
+                        echo '<span>Rol:admin</span>';
+                    }
+                    else{
+                        echo '<span>Rol:usuario</span>';
+                    }
+                    echo '</span>';
+                }
+                if($usuario!=null){
                     echo '<span>|</span>';
                 }
                 echo '<span class="user">';

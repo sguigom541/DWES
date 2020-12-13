@@ -305,7 +305,9 @@ input,select{
     cursor:pointer;
     margin:15px auto;
 }
-
+.option_rol{
+	color:red;
+}
 /*=====================ESTILOS DE LA TABLA DE LISTADO DE USUARIOS=======================*/
 #container-lista h1{
 	font-size: 35px;

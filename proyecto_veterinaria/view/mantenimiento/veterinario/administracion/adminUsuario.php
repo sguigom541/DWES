@@ -38,8 +38,13 @@
                    echo '<td>' . $clave->getCodigoRol(). '</td>';
                    echo '<td>';
                         echo '<a class="link_edit" href="?veterinario=editarUsuario&idUsuario=' . $clave->getCodUsuario() . '">Editar</a>';
-                        echo '|';
-                        echo '<a class="link_delete" href="?veterinario=eliminarUsuario&idUsuario=' . $clave->getCodUsuario() . '">Borrar</a>';
+                        
+                        if($clave->getCodigoRol()==1){
+                            echo '|';
+                            echo '<a class="link_delete" href="?veterinario=eliminarUsuario&idUsuario=' . $clave->getCodUsuario() . '&rol=' . $clave->getCodUsuario() . '">Borrar</a>';
+                        }
+                        
+                       
                    echo '</td>';
                    echo '</tr>';
                }
