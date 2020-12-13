@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>veterina s.a</title>
+    <script src="./script/funciones.js"></script>
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>

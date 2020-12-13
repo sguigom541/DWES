@@ -1,4 +1,5 @@
-
+@import url(./fonts/GothamBold.css);
+@import url(./fonts/GothamBook.css);
 /*=====================RESETEAMOS LOS ESTILOS POR DEFECTO=======================*/
 *{
     margin:0;
@@ -256,4 +257,127 @@ nav li ul li:last-child{
 	letter-spacing: 1px;
 	border:0;
 	cursor:pointer;
+}
+
+/*=====================ESTILOS DEL FORMULARIO DE REGISTRO DE USUARIO=======================*/
+.form_register{
+    width:450px;
+    margin:auto;
+}
+
+.form_register h1{
+    color:#3c93b0;
+}
+hr{
+    border:0;
+    background:#ccc;
+    height:2px;
+    margin:10px 0;
+    display:block;
+}
+.form_register form{
+    background:#fff;
+    margin:auto;
+    padding:20px 50px;
+    border:1px solid #d1d1d1;
+}
+label{
+    display:block;
+    font-size:14pt;
+    font-family:'GothamBook';
+    margin:15px auto 5px auto;
+}
+input,select{
+    display:block;
+    width:100%;
+    font-size: 12pt;
+    padding:7px;
+    border:1px solid #85929e;
+    border-radius: 5px;
+}
+.btn_save{
+    font-size: 14pt;
+    background:#12a4c6;
+    padding:11px;
+    color:white;
+    letter-spacing: 1px;
+    border:0;
+    cursor:pointer;
+    margin:15px auto;
+}
+
+/*=====================ESTILOS DE LA TABLA DE LISTADO DE USUARIOS=======================*/
+#container-lista h1{
+	font-size: 35px;
+	display:inline-block;
+
+}
+.btn_new{
+	display:inline-block;
+	background: #239baa;
+	color:#fff;
+	padding:5px 25px;
+	border-radius: 4px;
+	margin:20px;
+}
+
+table{
+	border-collapse: collapse;
+	font-size: 12pt;
+	font-family: 'Arial';
+	width: 100%;
+}
+table th{
+	text-align: left;
+	padding:10px;
+	background:#3d7ba8;
+	color:#fff;
+}
+table tr:nth-child(odd){
+	background: #fff;
+}
+table td{
+	padding:10px;
+}
+.link_edit{
+	color:#0ca4ce;
+}
+.link_delete{
+	color:#f26b6b;
+}
+
+/*ESTILOS PARA EL FORMULARIO DE BORRADO DE DATOS*/
+
+#container_delete{
+	padding: 90px 15px 15px;
+}
+.data_delete{
+	text-align: center;
+}
+.data_delete h2{
+	font-size: 12pt;
+}
+.data_delete span{
+	font-weight: bold;
+	color:#4f72d4;
+	font-size: 12pt;
+}
+.data_delete form{
+	background: initial;
+	margin:auto;
+	padding: 20px 50px;
+	border:0;
+}
+.btn_cancelar,.btn_ok{
+	width:125px;
+	background:#478ba2;
+	color:#fff;
+	display:inline-block;
+	padding:5px;
+	border-radius:5px;
+	cursor:pointer;
+	margin:15px;
+}
+.btn_cancelar{
+	background:#42b343 ;
 }

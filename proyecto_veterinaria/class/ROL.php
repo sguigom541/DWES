@@ -13,7 +13,7 @@
             $this->codRol=$newCodRol;
         }
 
-        public function getNombre()
+        public function getNomRol()
         {
             return $this->nombre;
         }

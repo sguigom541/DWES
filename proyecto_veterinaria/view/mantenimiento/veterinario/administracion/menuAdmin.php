@@ -2,8 +2,12 @@
 <nav>
     <ul>
         <li class="principal">
+            <a href="?veterinario=adminUsuarios">Inicio</a>
+        </li>
+        <li class="principal">
             <a href="#">Administración</a>
             <ul>
+                <li><a href="?veterinario=crearUsuario">Crear Usuario</a></li>
                 <li><a href="?veterinario=adminUsuarios">Admin Usuarios</a></li>
                 <li><a href="?veterinario=adminMascotas">Admin Mascota</a></li>
                 <li><a href="?veterinario=adminCVacunacion">Admin Cartilla Vacunación</a></li>

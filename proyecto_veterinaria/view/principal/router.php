@@ -30,6 +30,15 @@
             case "adminUsuarios":
                 require_once './view/mantenimiento/veterinario/administracion/adminUsuario.php';
             break;
+            case "crearUsuario":
+                require_once './view/mantenimiento/veterinario/administracion/crearUsuario.php';
+            break;
+            case "editarUsuario":
+                require_once './view/mantenimiento/veterinario/administracion/editarUsuario.php';
+            break;
+            case "eliminarUsuario":
+                require_once './view/mantenimiento/veterinario/administracion/eliminarUsuario.php';
+            break;
             case "adminMascotas":
                 require_once './view/mantenimiento/veterinario/administracion/adminMascota.php';
             break;
@@ -40,7 +49,7 @@
                 require_once './view/mantenimiento/veterinario/administracion/darCita.php';
             break;
             case "pasarVisita":
-                require_once './view/mantenimiento/veterinario/otrasAdmin/pasarVisita.php';
+                require_once './view/mantenimiento/veterinario/administracion/pasarVisita.php';
             break;
             case "adminRol":
                 require_once './view/mantenimiento/veterinario/otrasAdmin/adminRol.php';
