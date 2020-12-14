@@ -385,3 +385,21 @@ table td{
 }
 
 /*=================ESTILOS PARA LA VENTANA MODAL DE BUSQUEDA*/
+
+
+
+
+/*=================ESTILOS PARA EL FORMULARIO DE PASAR VISITA*/
+.container_visita{
+	width:450px;
+    margin:auto;
+}
+.container_visita form{
+    background:#fff;
+    margin:auto;
+    padding:20px 50px;
+    border:1px solid #d1d1d1;
+}
+.container_visita form input[type="checkbox"]{
+	float:right;
+}
