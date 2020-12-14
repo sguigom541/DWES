@@ -8,6 +8,7 @@
             <a href="#">Administración</a>
             <ul>
                 <li><a href="?veterinario=crearUsuario">Crear Usuario</a></li>
+                <li><a href="?veterinario=crearMascota">Crear Mascota</a></li>
                 <li><a href="?veterinario=adminUsuarios">Admin Usuarios</a></li>
                 <li><a href="?veterinario=adminMascotas">Admin Mascota</a></li>
                 <li><a href="?veterinario=adminCVacunacion">Admin Cartilla Vacunación</a></li>

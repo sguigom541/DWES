@@ -42,6 +42,9 @@
             case "adminMascotas":
                 require_once './view/mantenimiento/veterinario/administracion/adminMascota.php';
             break;
+            case "crearMascota":
+                require_once './view/mantenimiento/veterinario/administracion/crearMascota.php';
+            break;
             case "adminCVacunacion":
                 require_once './view/mantenimiento/veterinario/administracion/adminCVacunacion.php';
             break;

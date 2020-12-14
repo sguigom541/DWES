@@ -2,7 +2,7 @@
     class mascota{
     //propiedades de la clase mascota
         private $codMascota;
-        private $nombre;
+        private $nombreMascota;
         private $fechaNac;
         private $imgMascota;
         private $codEspecie;
@@ -29,14 +29,14 @@
      * @return String el nombre de la mascota
      */
     public function getNombreMascota(){
-        return $this->nombre;
+        return $this->nombreMascota;
     }
 
     /**
      * @param String el nuevo nombre de la mascota
      */
     public function setNombreMascota($nuevoNombreMascota){
-        $this->nombre=$nuevoNombreMascota;
+        $this->nombreMascota=$nuevoNombreMascota;
     }
     /**
      * @return Date la fecha en que nació la mascota

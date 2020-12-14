@@ -27,16 +27,15 @@ $gbd = new GBD("localhost", "sggveterinaria", "root", "");
                 <th>Acciones</th>
             </tr>
             <?php
-               $mascota= $gbd->getAll("mascota");
-               print_r($mascota[4]);
-               foreach ($mascota as $clave) {
+               $mascota2=$gbd->getAllMascotas();
+               foreach ($mascota2 as $clave) {
                    echo '<tr>';
-                   echo '<td>' . $clave->getCodMascota() . '</td>';
-                   echo '<td>' . $clave->getNombreMascota() . '</td>';
-                   echo '<td>' . $clave->getFechaNac(). '</td>';
-                   echo '<td>' . $clave->getCodEspecie(). '</td>';
-                   echo '<td>' . $clave->getCodGenero(). '</td>';
-                   echo '<td>' . $clave->getCodUsuario(). '</td>';
+                   echo '<td>' . $clave['codMascota'] . '</td>';
+                   echo '<td>' . $clave['nombreMascota']. '</td>';
+                   echo '<td>' . $clave['fechaNac']. '</td>';
+                   echo '<td>' . $clave['especie']. '</td>';
+                   echo '<td>' . $clave['genero']. '</td>';
+                   echo '<td>' . $clave['codUsuario']. '</td>';
                    echo '<td>';
                         echo '<a class="link_edit" href="?veterinario=editarMascota">Editar</a>';
                         echo '|';

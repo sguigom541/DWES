@@ -242,17 +242,18 @@ class GBD
     {
         $sql = "SELECT codUsuario FROM usuario WHERE codUsuario=?";
         $consulta = $this->conexion->prepare($sql);
-        $existe=false;
+        $existe = false;
         $consulta->bindParam(1, $idUsuario);
         $consulta->execute();
         if ($consulta->rowCount() > 0) {
-            $existe= true;
+            $existe = true;
         }
         return $existe;
     }
 
-    public function comprobacionUsuarioUpdate(string $tabla, string $nombre, string $codUsuario,string $correo){
-        $sql= "SELECT * from $tabla where (nombre='" . $nombre . "' and codUsuario!='" . $codUsuario . "') or (email='" . $codUsuario . "' and codUsuario!='" . $codUsuario . "')";
+    public function comprobacionUsuarioUpdate(string $tabla, string $nombre, string $codUsuario, string $correo)
+    {
+        $sql = "SELECT * from $tabla where (nombre='" . $nombre . "' and codUsuario!='" . $codUsuario . "') or (email='" . $codUsuario . "' and codUsuario!='" . $codUsuario . "')";
         try {
             $consulta = $this->conexion->prepare($sql);
             $consulta->bindParam(1, $codUsuario);
@@ -264,7 +265,19 @@ class GBD
             throw new Exception("Error leyendo en la bd:" . $e->getMessage());
         }
     }
-    public function devolverUsuario(string $codUsuario){
-
+    public function devolverUsuario(string $codUsuario)
+    {
+    }
+    public function getAllMascotas()
+    {
+        $sql = "select m.codMascota,m.nombreMascota,m.fechaNac,e.nombre as especie,g.nombre as genero,m.codUsuario from mascota m inner join especie e on m.codEspecie=e.codEspecie inner join genero g on m.codGenero=g.codGenero;";
+        try {
+            $consulta = $this->conexion->prepare($sql);
+            $consulta->execute();
+            $datos = $consulta->fetchAll(PDO::FETCH_ASSOC);
+            return $datos;
+        } catch (PDOException $e) {
+            throw new PDOException("Error de lectura de datos: " . $e->getMessage());
+        }
     }
 }
