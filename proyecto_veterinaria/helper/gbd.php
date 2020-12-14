@@ -280,4 +280,17 @@ class GBD
             throw new PDOException("Error de lectura de datos: " . $e->getMessage());
         }
     }
+
+    public function getMascotasUsuario(string $usuario)
+    {
+        $sql="select m.codMascota,m.nombreMascota,m.fechaNac,e.nombre as especie from mascota m inner join especie e on m.codEspecie=e.codEspecie where codUsuario='" . $usuario . "';";
+        try {
+            $consulta = $this->conexion->prepare($sql);
+            $consulta->execute();
+            $datos = $consulta->fetchAll(PDO::FETCH_ASSOC);
+            return $datos;
+        } catch (PDOException $e) {
+            throw new PDOException("Error de lectura de datos: " . $e->getMessage());
+        }
+    }
 }
