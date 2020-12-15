@@ -1,15 +1,15 @@
 window.addEventListener("load", function () {
-    // función para ocultar el div de la vacuna de la mascota;
-    var divVacuna = document.getElementById("vacuna");
-    var checkbox = document.getElementById("quiereVacuna");
-    checkbox.addEventListener("change", function () {
-        if (checkbox.checked) {
-            divVacuna.style.display = "block";
-        }
-        else {
-            divVacuna.style.display = "none";
-        }
-    });
+   // función para ocultar el div de la vacuna de la mascota;
+   var divVacuna = document.getElementById("vacuna");
+   var checkbox = document.getElementById("quiereVacuna");
+   checkbox.addEventListener("change", function () {
+       if (checkbox.checked) {
+           divVacuna.style.display = "block";
+       }
+       else {
+           divVacuna.style.display = "none";
+       }
+   });
 
     //eventos para la ventana modal del usuario
     var modal = document.getElementById("divModal");
@@ -61,6 +61,8 @@ window.addEventListener("load", function () {
 
 
 
-    // 
+    // div para el chip del animal
+
+    
 })
 

@@ -44,6 +44,8 @@ $fechaFormateada=$ahora->format('Y-m-d H:i:s');
 
 <body>
     <div class="container_visita">
+        <h2></h2>
+        <hr>
         <form action="" method="POST">
             <label for="usuario">Dueño</label>
             <input type="text" name="usuario" id="" value="<?php 

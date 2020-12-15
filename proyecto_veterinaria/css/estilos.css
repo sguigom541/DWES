@@ -488,4 +488,58 @@ table.paleBlueRows {
 	float:right;
 }
 
+/*======================ESTILOS PARA EL FORMULARIO DE CREAR MASCOTAS*/
 
+.form_register_mascota{
+   width:100%;
+    margin:auto;
+}
+
+.datos_mascota{
+	width:50%;
+}
+.otros_datos_mascota{
+	width:50%;
+	float:right;
+}
+.form_register_mascota h1{
+    color:#3c93b0;
+}
+hr{
+    border:0;
+    background:#ccc;
+    height:2px;
+    margin:10px 0;
+    display:block;
+}
+.form_register_mascota form{
+    background:#fff;
+    margin:auto;
+    padding:20px 50px;
+    border:1px solid #d1d1d1;
+}
+label{
+    display:block;
+    font-size:14pt;
+    font-family:'GothamBook';
+    margin:15px auto 5px auto;
+}
+.form_register_mascota input,select{
+    display:inline-block;
+    width:30%;
+    font-size: 12pt;
+    padding:7px;
+    border:1px solid #85929e;
+    border-radius: 5px;
+}
+.btn_add{
+    font-size: 14pt;
+    background:#12a4c6;
+    padding:11px;
+    color:white;
+    letter-spacing: 1px;
+    border:0;
+    cursor:pointer;
+	margin:15px 20px;
+	display:inline;
+}
