@@ -42,7 +42,7 @@ else{
 
 
 
-?>
+
 
 
 <div class="form_register">
