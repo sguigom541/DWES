@@ -2,7 +2,6 @@
 date_default_timezone_set("Europe/Madrid");
 $gbd = new GBD("localhost", "sggveterinaria", "root", "");
 $ahora = new DateTime();
-echo $ahora->format('Y-m-d H:i:s');
 $fechaFormateada=$ahora->format('Y-m-d H:i:s');
 
 // se valida el formulario
@@ -45,7 +44,7 @@ $fechaFormateada=$ahora->format('Y-m-d H:i:s');
 
 <body>
     <div class="container_visita">
-        <h2></h2>
+        <h2>Nueva Visita</h2>
         <hr>
         <form action="" method="POST">
             <label for="usuario">Dueño</label>
