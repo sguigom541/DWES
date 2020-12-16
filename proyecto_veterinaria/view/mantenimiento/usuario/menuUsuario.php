@@ -5,7 +5,7 @@
             <a href="?user=cliente">Cliente</a>
         </li>
         <li class="principal">
-            <a href="?user=historialMascota">Mascotas</a>
+            <a href="?user=historialMascota">Cartilla Vacunacion</a>
         </li>
     </ul>
 </nav>

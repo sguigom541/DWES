@@ -25,7 +25,24 @@ class Validacion
         }
         return true;
     }
-
+    /**
+     * Método que comprueba que una fecha de nacimiento no sea posterior al día de hoy
+     */
+    public function validaFecha($campo){
+        $ahora = new DateTime();
+        //echo $ahora->format('Y-m-d');
+        $ahoraFormateado = $ahora->format('Y-m-d');
+        
+        if($_POST[$campo]>$ahoraFormateado){
+            $this->errores[$campo]="la fecha de nacimiento no puede ser posterior a la de hoy";
+            return false;
+        }
+        else if(empty($_POST[$campo])){
+            $this->errores[$campo]="la fecha  no puede estar vacía";
+            return false;
+        }
+        return true;
+    }
     /**
      * Método que comprueba que el campo es un valor entero
      * y de manera opcional un rango de valores

@@ -18,13 +18,13 @@
         /**
          * @return String retorna el lugar de implantación del chip del animal
          */
-        public function lugarImplantacion(){
+        public function getLugarImplantacion(){
             return $this->lugarImplantacion;
         }
         /**
          * @param $newLugarImplantacion establece el lugar de implantación del chip en el animal
          */
-        public function setNombre($newLugarImplantacion){
+        public function setLugarImplantacion($newLugarImplantacion){
             $this->lugarImplantacion=$newLugarImplantacion;
         }
     }

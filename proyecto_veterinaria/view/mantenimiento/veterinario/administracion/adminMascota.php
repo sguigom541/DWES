@@ -37,9 +37,9 @@ $gbd = new GBD("localhost", "sggveterinaria", "root", "");
                    echo '<td>' . $clave['genero']. '</td>';
                    echo '<td>' . $clave['codUsuario']. '</td>';
                    echo '<td>';
-                        echo '<a class="link_edit" href="?veterinario=editarMascota">Editar</a>';
+                        echo '<a class="link_edit" href="?veterinario=editarMascota&idMascota=' . $clave['codMascota'] . '">Editar</a>';
                         echo '|';
-                        echo '<a class="link_delete" href="?veterinario=eliminarMascota">Borrar</a>';
+                        echo '<a class="link_delete" href="?veterinario=eliminarMascota&idMascota=' . $clave['codMascota'] . '">Borrar</a>';
                    echo '</td>';
                    echo '</tr>';
                }

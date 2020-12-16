@@ -543,3 +543,97 @@ label{
 	margin:15px 20px;
 	display:inline;
 }
+
+
+
+/*=============Estilos para los datos personales del cliente*/
+#container-form{
+	background:#5d6d7e;
+	width:100%;
+	height:100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#container-form form{
+	background: #fff;
+	width:400px;
+	padding:12px;
+}
+
+#tituloLogin{
+	width:100%;
+	background:#2980b9;
+	padding:20pt;
+	color:#FFF;
+	text-align: center;
+	text-transform:uppercase;
+
+}
+
+#container-form form img{
+	margin:15px auto;
+	text-align: center;
+	display:block;
+	width:100px;
+	height:100px;
+}
+#container-form form input{
+	width:100%;
+	padding:7px;
+	font-size: 16pt;
+	display: block;
+	margin:15px auto;
+	border-radius: 10px;
+	border:1px solid #ccc;
+	text-align: center;
+}
+#container-form form input[type="submit"]{
+	background:#B03A2E;
+	padding:12px;
+	color:#fff;
+	letter-spacing: 1px;
+	border:0;
+	cursor:pointer;
+}
+
+/*=====================ESTILOS DEL FORMULARIO DE REGISTRO DE USUARIO=======================*/
+.datospersonales{
+    width:100%;
+    margin:auto;
+}
+
+.datospersonales h1{
+    color:#3c93b0;
+}
+hr{
+    border:0;
+    background:#ccc;
+    height:2px;
+    margin:10px 0;
+    display:block;
+}
+.datospersonales form{
+	width:100%;
+    margin:auto;
+    padding:20px 50px;
+    border:1px solid #d1d1d1;
+}
+.datospersonales label{
+    display:inline;
+    font-size:14pt;
+    font-family:'GothamBook';
+    margin:15px auto 5px auto;
+}
+.datospersonales input,select{
+    display:block;
+    width:50%;
+    font-size: 12pt;
+    padding:7px;
+    border:1px solid #85929e;
+    border-radius: 5px;
+}

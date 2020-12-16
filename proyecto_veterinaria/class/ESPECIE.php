@@ -13,7 +13,7 @@
         /**
          * @param $newCodEspecie establece el código de la especie del animal
          */
-        public function setCodGenero($newCodEspecie){
+        public function setCodEspecie($newCodEspecie){
             $this->codEspecie=$newCodEspecie;
         }
         /**

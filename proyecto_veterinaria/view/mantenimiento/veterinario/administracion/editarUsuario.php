@@ -46,7 +46,7 @@ else{
 ?>
 
 <div class="form_register">
-    <h1>Registro Usuario</h1>
+    <h1>Editando Usuario</h1>
     <hr>
 
     <form action="" method="POST">

@@ -251,6 +251,17 @@ class GBD
         return $existe;
     }
 
+    public function existeMascota(string $idMascota){
+        $sql = "SELECT codMascota FROM mascota WHERE codMascota=?";
+        $consulta = $this->conexion->prepare($sql);
+        $existe = false;
+        $consulta->bindParam(1, $idMascota);
+        $consulta->execute();
+        if ($consulta->rowCount() > 0) {
+            $existe = true;
+        }
+        return $existe;
+    }
     public function comprobacionUsuarioUpdate(string $tabla, string $nombre, string $codUsuario, string $correo)
     {
         $sql = "SELECT * from $tabla where (nombre='" . $nombre . "' and codUsuario!='" . $codUsuario . "') or (email='" . $codUsuario . "' and codUsuario!='" . $codUsuario . "')";
@@ -258,6 +269,20 @@ class GBD
             $consulta = $this->conexion->prepare($sql);
             $consulta->bindParam(1, $codUsuario);
             $consulta->bindParam(2, $correo);
+            $consulta->execute();
+            $datos = $consulta->fetchAll(PDO::FETCH_CLASS, $tabla);
+            return $datos;
+        } catch (PDOException $e) {
+            throw new Exception("Error leyendo en la bd:" . $e->getMessage());
+        }
+    }
+    public function comprobacionMascotaUpdate(string $tabla, string $nombre, string $codMascota)
+    {
+        $sql = "SELECT * from $tabla where nombreMascota='" . $nombre . "' and codMascota!='" . $codMascota . "'";
+        try {
+            $consulta = $this->conexion->prepare($sql);
+            $consulta->bindParam(1, $codMascota);
+            $consulta->bindParam(2, $nombre);
             $consulta->execute();
             $datos = $consulta->fetchAll(PDO::FETCH_CLASS, $tabla);
             return $datos;

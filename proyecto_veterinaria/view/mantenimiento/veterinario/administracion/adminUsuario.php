@@ -41,7 +41,7 @@
                         
                         if($clave->getCodigoRol()==1){
                             echo '|';
-                            echo '<a class="link_delete" href="?veterinario=eliminarUsuario&idUsuario=' . $clave->getCodUsuario() . '&rol=' . $clave->getCodUsuario() . '">Borrar</a>';
+                            echo '<a class="link_delete" href="?veterinario=eliminarUsuario&idUsuario=' . $clave->getCodUsuario() . '&rolUsuario=' . $clave->getCodigoRol() . '">Borrar</a>';
                         }
                         
                        
