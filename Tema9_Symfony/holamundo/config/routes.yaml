@@ -1,0 +1,17 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+
+# config/routes.yaml
+
+# the "app_lucky_number" route name is not important yet
+holamundo:
+    path: /hola
+    controller: App\Controller\Hola::saluda
+adiosmundo:
+    path: /adios
+    controller: App\Controller\Hola::adios
+
+
+

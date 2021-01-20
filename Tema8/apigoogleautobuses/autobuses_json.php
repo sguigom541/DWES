@@ -1,0 +1,6 @@
+<?php
+    //$url="https://datosabiertos.malaga.eu/recursos/transporte/EMT/EMTlineasUbicaciones/lineasyubicaciones.geojson";
+   
+    $url="http://opendata.caceres.es/sparql/?default-graph-uri=http%3A%2F%2Fopendata.caceres.es%2Frecurso%2Ftransporte%2FestadoFlotaAutobusesParadas%2F&query=SELECT+%3Fautobus+%3Frdfs_comment+%3Fgeo_long+%3Fgeo_lat+%3Fhora+%3Fvelocidad+%3Frdfs_label+%3FProximaParada+%3FllegadaProximaParada+%3FsalidaProximaParada%0D%0AWHERE+%7B+%0D%0A++++%3Fautobus+a+bu%3AAutobusUrbanoP.%0D%0A++++OPTIONAL++%7B%3Fautobus+rdfs%3Acomment+%3Frdfs_comment.+%7D%0D%0A++++OPTIONAL++%7B%3Fautobus+rdfs%3Acomment+%3Frdfs_comment.+%7D%0D%0A++++OPTIONAL++%7B%3Fautobus+geo%3Along+%3Fgeo_long.+%7D%0D%0A++++OPTIONAL++%7B%3Fautobus+geo%3Alat+%3Fgeo_lat.+%7D%0D%0A++++OPTIONAL++%7B%3Fautobus+bu%3AtimeMeasuring+%3Fhora.+%7D%0D%0A++++OPTIONAL++%7B%3Fautobus+bu%3AnombreSiguienteParada+%3FProximaParada.+%7D%0D%0A++++OPTIONAL++%7B%3Fautobus+bu%3AllegadaSiguienteParada+%3FllegadaProximaParada.+%7D%0D%0A++++OPTIONAL++%7B%3Fautobus+bu%3AsalidaSiguienteParada+%3FsalidaProximaParada.+%7D%0D%0A++++OPTIONAL++%7B%3Fautobus+rdfs%3Avelocidad+%3Fvelocidad.+%7D++%0D%0A++++OPTIONAL++%7B%3Fautobus+rdfs%3Alabel+%3Frdfs_label.+%7D%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on";
+    $json =file_get_contents($url);
+    echo $json;
